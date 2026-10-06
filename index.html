@@ -265,10 +265,43 @@
       <div class="container contact-grid">
         <div class="contact-box reveal">
           <span class="section-label">Get in Touch</span>
-          <h2>Let’s build stronger agricultural connections.</h2>
-          <p>
-            For business enquiries, agricultural commodity discussions and visits to our facility, contact Raman Agro Industries.
-          </p>
+          <h2>Send us an enquiry on WhatsApp.</h2>
+          <p>Share your details and what you’re interested in. WhatsApp will open with your message ready to send.</p>
+
+          <form class="enquiry-form" id="whatsappEnquiryForm">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="enquiryName">Your name</label>
+                <input id="enquiryName" name="name" type="text" autocomplete="name" required>
+              </div>
+
+              <div class="form-field">
+                <label for="enquiryPhone">Phone number</label>
+                <input id="enquiryPhone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="enquirySubject">What is your enquiry about?</label>
+              <select id="enquirySubject" name="subject" required>
+                <option value="" selected disabled>Select a topic</option>
+                <option>Cotton ginning and pressing</option>
+                <option>Cottonseed</option>
+                <option>Agricultural commodity trading</option>
+                <option>Warehousing and storage</option>
+                <option>Visit our facility</option>
+                <option>Other business enquiry</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="enquiryMessage">Message</label>
+              <textarea id="enquiryMessage" name="message" rows="4" required></textarea>
+            </div>
+
+            <button class="btn enquiry-submit" type="submit">Continue to WhatsApp →</button>
+            <p class="form-note">Your details are not stored on this website. Review the message in WhatsApp and press Send to contact us.</p>
+          </form>
         </div>
 
         <div class="contact-box reveal">
