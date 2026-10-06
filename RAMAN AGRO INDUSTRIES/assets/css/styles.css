@@ -76,7 +76,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -106,7 +106,7 @@ header {
 }
 
 .logo-area img {
-  height: 60px;
+  height: 72px;
 }
 
 .nav-links {
@@ -215,9 +215,10 @@ header {
 }
 
 .hero-visual img {
+  display: block;
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: 18px;
 }
 
@@ -404,58 +405,60 @@ header {
 }
 
 .video-placeholder {
-  min-height: 380px;
-  padding: 25px;
+  padding: 12px;
   background: #102b1e;
-  border: 1px dashed #73947c;
+  border: 1px solid #73947c;
   border-radius: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  overflow: hidden;
 }
 
 .video-placeholder video {
+  display: block;
   width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: 15px;
+  background: #102b1e;
+  object-fit: contain;
 }
 
-.video-placeholder .play-icon {
-  font-size: 45px;
-  color: white;
-  margin-bottom: 12px;
-}
-
-.values-grid {
+.founder-vision {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.value-box {
+  grid-template-columns: minmax(240px, 0.8fr) 1.2fr;
+  align-items: center;
+  gap: 40px;
+  padding: 28px;
   background: white;
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 32px;
+  box-shadow: 0 10px 25px rgba(23,67,42,0.06);
 }
 
-.value-box p {
-  line-height: 1.9;
+.founder-vision img {
+  width: min(100%, 260px);
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+  justify-self: center;
 }
 
-.founder-quote {
-  margin-top: 25px;
+.founder-vision-copy h3 {
+  margin: 12px 0 20px;
+  color: var(--dark);
+  font-size: clamp(28px, 3vw, 38px);
+}
+
+.founder-vision-copy blockquote {
+  margin: 0 0 20px;
+  padding: 20px 24px;
   background: var(--light-green);
-  padding: 35px;
-  border-radius: 20px;
   border-left: 5px solid var(--green);
+  border-radius: 0 14px 14px 0;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
-.founder-quote blockquote {
-  font-size: 22px;
-  line-height: 1.6;
-  margin: 0 0 15px;
+.founder-vision-copy p {
+  line-height: 1.9;
 }
 
 .contact {
@@ -552,8 +555,13 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  .values-grid {
+  .founder-vision {
     grid-template-columns: 1fr;
+  }
+
+  .founder-vision img {
+    width: min(100%, 220px);
+    justify-self: center;
   }
 
   .hero {
@@ -587,7 +595,4 @@ footer p {
     min-height: 300px;
   }
 
-  .hero-visual img {
-    height: 220px;
-  }
 }
