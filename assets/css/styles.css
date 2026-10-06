@@ -434,9 +434,10 @@ header {
 }
 
 .founder-vision img {
-  width: min(100%, 260px);
-  height: auto;
-  object-fit: contain;
+  width: min(100%, 300px);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 20%;
   border-radius: 16px;
   justify-self: center;
 }
@@ -617,7 +618,7 @@ footer p {
   }
 
   .founder-vision img {
-    width: min(100%, 220px);
+    width: min(100%, 240px);
     justify-self: center;
   }
 
