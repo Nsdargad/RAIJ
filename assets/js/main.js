@@ -39,7 +39,7 @@ whatsappEnquiryForm.addEventListener("submit", function (event) {
     `Enquiry about: ${formData.get("subject")}`,
     `Message: ${formData.get("message").trim()}`
   ].join("\n");
-  const whatsappUrl = `https://wa.me/919922175195?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/917038959495?text=${encodeURIComponent(message)}`;
 
   window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 });
